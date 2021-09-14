@@ -12,7 +12,7 @@ const ScoreWrapper = ({
     const checkWinner = () => {
         if(winner) {  
             return 'Winner ' + winner;
-        } else if (gamePlace == null) {
+        } else  {
             return "Now  " + (xIsNext ? 'X' : 'O') + " turn"
         }
 
