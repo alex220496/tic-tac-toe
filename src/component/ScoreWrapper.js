@@ -1,4 +1,3 @@
-
 import './scorewrapper.css';
 
 const ScoreWrapper = ({
@@ -20,8 +19,8 @@ const ScoreWrapper = ({
     return (
         <div className="score-wrapper">
             <div className="sub-score">{status}</div>
-            <div className="first-player text">Player1</div>
-            <div className="second-player text">Player2</div>
+            <div className="first-player text">Player1: </div>
+            <div className="second-player text">Player2: </div>
             {refresh()}
         </div>
     );
