@@ -9,6 +9,7 @@ import "./wrapper.css"
 const Wrapper = () => {
   const [gamePlace, setgamePlace] = useState(Array(9).fill(null));
   const [xIsNext, setxIsNext] = useState(true);
+  const [userName, setuserName] = useState("");
   const winner = calculateWinner(gamePlace)                                                                                                                                                                                         
   console.log(gamePlace);
   
@@ -21,15 +22,6 @@ const Wrapper = () => {
     
     setgamePlace(gamePlace);
     setxIsNext(!xIsNext)
-  }
-
-  const isTie = () => {
-    let filled = true;
-    gamePlace.forEach((s)=> {
-      if(s == null) {
-        filled = false;
-      }
-    })
   }
 
  
@@ -64,8 +56,18 @@ const Wrapper = () => {
                       winner = {winner}
                       xIsNext = {xIsNext}
                       gamePlace = {gamePlace}
+                      setgamePlace={setgamePlace}
                       
         />
+      </div>
+    </div>
+    <div className="modal">
+      <div className="modal__inner">
+        <div className="closed">x</div>
+        <p>Add your name Player 1</p>
+        <input className ="modal__input" type="text" value={userName} onChange={true}/>
+        <p>Add your name Player 2</p>
+        <input className ="modal__input" type="text" value={userName} onChange={true} />
       </div>
     </div>
     </>
