@@ -5,9 +5,6 @@ const ScoreWrapper = ({
     refresh,
     winner,
     xIsNext,
-    gamePlace,
-    setgamePlace
-    
 }) => {
 
     let status;
